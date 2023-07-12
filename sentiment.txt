@@ -1,0 +1,9 @@
+This code defines a function called get_mood that analyzes the sentiment of a given input text using the TextBlob library and returns a Mood object containing an emoji representation and the sentiment value. It also includes a data class called Mood to store the emoji and sentiment values.
+
+This code imports the required libraries. TextBlob is a library that provides a simple API for performing various natural language processing tasks, including sentiment analysis. data class is used to create a simple class-like structure without explicitly writing boilerplate code.
+
+This function takes an input_text as a string and a threshold as a float parameter. It calculates the sentiment polarity of the input text using TextBlob's sentiment. polarity method. The threshold parameter determines the minimum value for sentiment to be considered positive or negative.
+
+Inside the function, it compares the sentiment value with the threshold. If the sentiment is greater than the positive threshold (friendly_threshold), it returns a Mood object with the emoji 'Positive😊'. If the sentiment is less than the negative threshold (hostile_threshold), it returns a Mood object with the emoji 'Negative😠'. If the sentiment is within the threshold range, it returns a Mood object with the emoji 'Neutral😐'.
+
+This code block checks if the script is being executed directly (not imported as a module). It then enters an infinite loop where it prompts the user to enter text. It calls the get_mood function with the user's input and a threshold of 0.3. It assigns the returned Mood object to the mood variable and prints the emoji representation and sentiment value.
